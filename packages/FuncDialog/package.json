@@ -1,6 +1,6 @@
 {
   "name": "shj-func-dialog",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0",
   "description": "shj-FuncDialog",
   "module": "es/index.js",
   "main": "lib/index.js",

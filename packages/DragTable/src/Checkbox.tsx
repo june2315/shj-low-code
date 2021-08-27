@@ -10,7 +10,7 @@ const Checkbox = forwardRef((props: any, ref) => {
   const { checked, onChange } = props;
 
   useImperativeHandle(ref, () => ({
-    setIndeterminate: (val) => {
+    setIndeterminate: (val: any) => {
       setIndeterminate(val);
     },
   }));
@@ -30,7 +30,7 @@ const Checkbox = forwardRef((props: any, ref) => {
     return () => {};
   }, [checked]);
 
-  const _onChange = (ev) => {
+  const _onChange = (ev: any) => {
     let checked = ev.target.checked;
     onChange && onChange(checked);
   };

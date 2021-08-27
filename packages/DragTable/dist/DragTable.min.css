@@ -214,7 +214,7 @@
   cursor: pointer;
 }
 .shj-table-setting-card .custom-icon path {
-  fill: #578AEC;
+  fill: #578aec;
 }
 /* spin */
 .shj-spin {
@@ -235,7 +235,7 @@
   font-variant: tabular-nums;
   line-height: 1.5715;
   list-style: none;
-  font-feature-settings: "tnum";
+  font-feature-settings: 'tnum';
   color: #666;
   text-align: center;
   vertical-align: middle;

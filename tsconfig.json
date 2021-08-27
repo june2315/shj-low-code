@@ -8,7 +8,7 @@
     "esModuleInterop": true,
     "sourceMap": true,
     "baseUrl": "./",
-    "strict": false,
+    "strict": true,
     "paths": {
       "@/*": ["src/*"],
       "@@/*": ["src/.umi/*"],
@@ -29,5 +29,17 @@
     "test",
     "docs",
     "tests"
+  ],
+  "include": [
+    "**/src/**/*",
+    "**/docs/**/*",
+    "scripts/**/*",
+    "**/demos",
+    ".eslintrc.js",
+    "tests",
+    "jest.config.js",
+    "**/fixtures",
+    "./tests/no-duplicated.ts",
+    "packages/descriptions/src/demos/.tsx"
   ]
 }

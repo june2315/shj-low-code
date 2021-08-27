@@ -46,7 +46,7 @@ export default defineConfig({
     // },
   ],
   devServer: {
-    port: 8020,
+    port: 8008,
   },
   // more config: https://d.umijs.org/config
 });

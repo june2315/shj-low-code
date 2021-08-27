@@ -11,7 +11,7 @@ import {
   VerticalAlignMiddle,
 } from './Icon';
 
-const SettingModal = (config) => {
+const SettingModal = (config: any) => {
   const { left, right, notFixed, hiddenColumns, defaultColumns } = config;
   const dialog = CRMDialog({
     title: '设置',
@@ -29,7 +29,7 @@ const SettingModal = (config) => {
   return dialog;
 };
 // 根据索引插入元素
-export const insertOfIndex = (arr, el) => {
+export const insertOfIndex = (arr: any[], el: any) => {
   let nextArr = [...arr];
   let i = 0;
   let isAdd = false;
@@ -58,14 +58,14 @@ export const insertOfIndex = (arr, el) => {
   return nextArr;
 };
 
-const TableSetting = (props) => {
+const TableSetting = (props: any) => {
   const { data, onSubmit } = props;
-  const [left, setLeft] = useState([]);
-  const [right, setRight] = useState([]);
-  const [notFixed, setNotFixed] = useState([]);
+  const [left, setLeft] = useState<any[]>([]);
+  const [right, setRight] = useState<any[]>([]);
+  const [notFixed, setNotFixed] = useState<any[]>([]);
 
   useEffect(() => {
-    const filterFunc = (d) => d.type !== 'selection';
+    const filterFunc = (d: any) => d.type !== 'selection';
     let left = data.left.filter(filterFunc);
     let right = data.right.filter(filterFunc);
     let notFixed = data.notFixed.filter(filterFunc);
@@ -89,17 +89,19 @@ const TableSetting = (props) => {
 
   const moveCard = useCallback(
     (dragIndex, hoverIndex, itemType) => {
-      const func = {
-        left: () => setLeft(moveArr(left, dragIndex, hoverIndex)),
-        right: () => setRight(moveArr(right, dragIndex, hoverIndex)),
-        notFixed: () => setNotFixed(moveArr(notFixed, dragIndex, hoverIndex)),
-      }[itemType];
+      const func = (
+        {
+          left: () => setLeft(moveArr(left, dragIndex, hoverIndex)),
+          right: () => setRight(moveArr(right, dragIndex, hoverIndex)),
+          notFixed: () => setNotFixed(moveArr(notFixed, dragIndex, hoverIndex)),
+        } as any
+      )[itemType];
       func && func();
     },
     [left, right, notFixed],
   );
 
-  const moveArr = (arr, dragIndex, hoverIndex) => {
+  const moveArr = (arr: any[], dragIndex: number, hoverIndex: number) => {
     let nextArr = [...arr];
     const dragCard = nextArr[dragIndex];
     const tempIndex = dragCard.index;
@@ -112,17 +114,19 @@ const TableSetting = (props) => {
 
   const setVisible = useCallback(
     (index, checked, itemType, data) => {
-      const func = {
-        left: () => setLeft(setItemVisible(left, index, checked)),
-        right: () => setRight(setItemVisible(right, index, checked)),
-        notFixed: () => setNotFixed(setItemVisible(notFixed, index, checked)),
-      }[itemType];
+      const func = (
+        {
+          left: () => setLeft(setItemVisible(left, index, checked)),
+          right: () => setRight(setItemVisible(right, index, checked)),
+          notFixed: () => setNotFixed(setItemVisible(notFixed, index, checked)),
+        } as any
+      )[itemType];
       func && func();
     },
     [left, right, notFixed],
   );
 
-  const setItemVisible = (arr, index, checked) => {
+  const setItemVisible = (arr: any[], index: number, checked: boolean) => {
     let nextArr = [...arr];
     nextArr[index] = { ...nextArr[index], hidden: !checked };
     return nextArr;
@@ -130,25 +134,29 @@ const TableSetting = (props) => {
 
   const setFixed = useCallback(
     (index, fixedValue, itemType, data) => {
-      const func = {
-        left: () => moveFixedItem(left, index, fixedValue),
-        right: () => moveFixedItem(right, index, fixedValue),
-        notFixed: () => moveFixedItem(notFixed, index, fixedValue),
-      }[itemType];
+      const func = (
+        {
+          left: () => moveFixedItem(left, index, fixedValue),
+          right: () => moveFixedItem(right, index, fixedValue),
+          notFixed: () => moveFixedItem(notFixed, index, fixedValue),
+        } as any
+      )[itemType];
       func && func();
     },
     [left, right, notFixed],
   );
 
-  const moveFixedItem = (arr, index, fixedValue) => {
+  const moveFixedItem = (arr: any[], index: number, fixedValue: any) => {
     let el = { ...arr[index] };
     arr.splice(index, 1);
     el.fixed = fixedValue;
-    const func = {
-      left: () => setLeft(insertOfIndex(left, el)),
-      right: () => setRight(insertOfIndex(right, el)),
-      notFixed: () => setNotFixed(insertOfIndex(notFixed, el)),
-    }[fixedValue || 'notFixed'];
+    const func = (
+      {
+        left: () => setLeft(insertOfIndex(left, el)),
+        right: () => setRight(insertOfIndex(right, el)),
+        notFixed: () => setNotFixed(insertOfIndex(notFixed, el)),
+      } as any
+    )[fixedValue || 'notFixed'];
     func && func();
   };
 
@@ -239,11 +247,11 @@ const TableSetting = (props) => {
   );
 };
 
-const Card = (props) => {
-  const ref = useRef(null);
+const Card = (props: any) => {
+  const ref = useRef<any>(null);
   const { data, id, index, itemType, moveCard, setVisible, setFixed } = props;
 
-  const onChange = (ev) => {
+  const onChange = (ev: any) => {
     let checked = ev.target.checked;
     setVisible && setVisible(index, checked, itemType, data);
   };
@@ -278,7 +286,7 @@ const Card = (props) => {
       const hoverMiddleY =
         (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
       // Determine mouse position
-      const clientOffset = monitor.getClientOffset();
+      const clientOffset: any = monitor.getClientOffset();
       // Get pixels to the top
       const hoverClientY = clientOffset.y - hoverBoundingRect.top;
       // Only perform the move when the mouse has crossed half of the items height

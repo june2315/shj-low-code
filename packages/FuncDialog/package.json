@@ -1,6 +1,6 @@
 {
   "name": "shj-func-dialog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "shj-FuncDialog",
   "module": "es/index.js",
   "main": "lib/index.js",
@@ -39,5 +39,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "c60201f98871a7870ef687c5d172e70422e6627a"
 }

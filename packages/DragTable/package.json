@@ -1,7 +1,7 @@
 {
   "name": "shj-drag-table",
-  "version": "1.0.0",
-  "description": "shj-DragTable",
+  "version": "1.1.23",
+  "description": "可拖拽排序、字段控制的表格",
   "module": "es/index.js",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -47,5 +47,6 @@
     "react-dnd-html5-backend": "^11.1.3",
     "react-resizable": "^3.0.4",
     "shj-func-dialog": "^1.0.0"
-  }
+  },
+  "gitHead": "c60201f98871a7870ef687c5d172e70422e6627a"
 }

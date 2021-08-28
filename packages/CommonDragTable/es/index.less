@@ -1,0 +1,44 @@
+/* write style here */
+.shj-common-drag-table {
+  padding: 0 24px;
+
+  .shj-drag-table-toolbar {
+    position: relative;
+    z-index: 1;
+    padding: 16px 0;
+
+    .shj-table-toolbar-form {
+      padding-bottom: 1px;
+      margin-right: 12px;
+    }
+
+    .shj-toolbar-item {
+      display: block;
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+
+  .shj-drag-table-footer {
+    padding: 16px 0;
+    &.footer-mask-show {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .shj-drag-table-pagination {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+}

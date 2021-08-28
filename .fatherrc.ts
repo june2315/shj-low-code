@@ -4,10 +4,14 @@ import { join } from 'path';
 // utils must build before core
 // runtime must build before renderer-react
 // components dependencies order: form -> table -> list
-const headPkgs: string[] = ['FuncDialog', 'DragTable'];
-const tailPkgs = readdirSync(join(__dirname, 'packages')).filter(
+
+let headPkgs: string[] = ['FuncDialog', 'DragTable'];
+
+let tailPkgs = readdirSync(join(__dirname, 'packages')).filter(
   (pkg) => pkg.charAt(0) !== '.' && !headPkgs.includes(pkg),
 );
+
+// console.log(process.argv)
 
 const type = process.env.BUILD_TYPE;
 

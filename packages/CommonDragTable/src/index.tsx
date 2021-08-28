@@ -310,8 +310,6 @@ const CommonDragTable = forwardRef((props: any, ref: any) => {
   );
 });
 
-CommonDragTable.propTypes = {};
-
 CommonDragTable.defaultProps = {};
 
 export default CommonDragTable;

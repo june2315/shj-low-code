@@ -731,7 +731,6 @@ var CommonDragTable = /*#__PURE__*/ (0, _react.forwardRef)(function (
     ),
   );
 });
-CommonDragTable.propTypes = {};
 CommonDragTable.defaultProps = {};
 var _default = CommonDragTable;
 exports.default = _default;

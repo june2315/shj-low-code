@@ -1,0 +1,89 @@
+/* write style here */
+.ant-advanced-search-form {
+  .symbol-option {
+    text-align: center;
+  }
+
+  .up-arrow,
+  .down-arrow {
+    position: relative;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 4px;
+    margin-left: 4px;
+    transform: rotate(-45deg);
+  }
+
+  .up-arrow {
+    top: 3px;
+    border-top: 1px solid #578aec;
+    border-right: 1px solid #578aec;
+  }
+
+  .down-arrow {
+    top: -3px;
+    border-bottom: 1px solid #578aec;
+    border-left: 1px solid #578aec;
+  }
+
+  .addon-select {
+    flex-shrink: 0;
+    text-align: center;
+    &.ant-select,
+    &.ant-select.ant-select-single.ant-select-focused,
+    &.ant-select.ant-select-single.ant-select-sm {
+      & > .ant-select-selector {
+        height: 100%;
+        border-right: 0;
+        border-color: #d9d9d9;
+        box-shadow: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        background-color: #fafafa;
+        .ant-select-selection-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+  // margin-bottom:
+  &.form-collapse {
+    margin-bottom: -24px;
+  }
+
+  .ant-form-item {
+    // margin-bottom: 0;
+    // margin-top: 24px;
+    flex-wrap: nowrap;
+    .ant-form-item-control {
+      max-width: calc(100% - 80px);
+    }
+  }
+
+  .ant-picker {
+    flex: 1;
+  }
+  .ant-form-item-label {
+    min-width: 80px;
+  }
+
+  .form-item-wrap {
+    display: flex;
+    width: 100%;
+
+    &.form-item-wrap-hidden {
+      display: none;
+    }
+
+    &.addon-wrap {
+      .ant-select {
+        max-width: calc(100% - 40px);
+      }
+    }
+  }
+}

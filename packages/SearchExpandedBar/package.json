@@ -1,0 +1,42 @@
+{
+  "name": "shj-search-expanded-bar",
+  "version": "1.2.1",
+  "description": "shj-search-expanded-bar",
+  "module": "es/index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "src",
+    "dist",
+    "es"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ant-design/pro-components"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "Firefox ESR",
+    "> 1%",
+    "ie >= 11"
+  ],
+  "keywords": [
+    "antd",
+    "admin"
+  ],
+  "authors": [],
+  "license": "MIT",
+  "bugs": "",
+  "peerDependencies": {
+    "antd": "4.x",
+    "rc-resize-observer": "1.x",
+    "react": "16.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "rc-resize-observer": "^1.0.0"
+  }
+}

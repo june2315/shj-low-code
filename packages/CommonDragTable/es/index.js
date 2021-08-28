@@ -656,6 +656,5 @@ var CommonDragTable = /*#__PURE__*/ forwardRef(function (props, ref) {
     ),
   );
 });
-CommonDragTable.propTypes = {};
 CommonDragTable.defaultProps = {};
 export default CommonDragTable;

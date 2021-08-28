@@ -12,6 +12,7 @@
     "docs:deploy": "gh-pages -d docs-dist",
     "build": "npm run build-lib && webpack && node ./scripts/gen_less_entry.js",
     "build-lib": "cross-env BUILD_TYPE=lib father-build && cross-env BUILD_TYPE=es father-build",
+    "build-scope": "node ./scripts/build-scope",
     "deploy": "npm run docs:build && npm run docs:deploy",
     "release": "npm run build && lerna publish",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",

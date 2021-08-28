@@ -14,7 +14,8 @@
       "@@/*": ["src/.umi/*"],
       "shj-func-dialog": ["./packages/FuncDialog/src/index.tsx"],
       "shj-drag-table": ["./packages/DragTable/src/index.tsx"],
-      "shj-common-drag-table": ["./packages/CommonDragTable/src/index.tsx"]
+      "shj-common-drag-table": ["./packages/CommonDragTable/src/index.tsx"],
+      "shj-search-expanded-bar": ["./packages/SearchExpandedBar/src/index.tsx"]
     },
     "declaration": true,
     "skipLibCheck": true,

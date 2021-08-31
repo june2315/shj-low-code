@@ -1,0 +1,73 @@
+/* write style here */
+.ant-advanced-search-form .symbol-option {
+  text-align: center;
+}
+.ant-advanced-search-form .up-arrow,
+.ant-advanced-search-form .down-arrow {
+  position: relative;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 4px;
+  margin-left: 4px;
+  transform: rotate(-45deg);
+}
+.ant-advanced-search-form .up-arrow {
+  top: 3px;
+  border-top: 1px solid #578aec;
+  border-right: 1px solid #578aec;
+}
+.ant-advanced-search-form .down-arrow {
+  top: -3px;
+  border-bottom: 1px solid #578aec;
+  border-left: 1px solid #578aec;
+}
+.ant-advanced-search-form .addon-select {
+  flex-shrink: 0;
+  text-align: center;
+}
+.ant-advanced-search-form .addon-select.ant-select > .ant-select-selector,
+.ant-advanced-search-form .addon-select.ant-select.ant-select-single.ant-select-focused > .ant-select-selector,
+.ant-advanced-search-form .addon-select.ant-select.ant-select-single.ant-select-sm > .ant-select-selector {
+  height: 100%;
+  border-right: 0;
+  border-color: #d9d9d9;
+  box-shadow: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #fafafa;
+}
+.ant-advanced-search-form .addon-select.ant-select > .ant-select-selector .ant-select-selection-item,
+.ant-advanced-search-form .addon-select.ant-select.ant-select-single.ant-select-focused > .ant-select-selector .ant-select-selection-item,
+.ant-advanced-search-form .addon-select.ant-select.ant-select-single.ant-select-sm > .ant-select-selector .ant-select-selection-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.ant-advanced-search-form.form-collapse {
+  margin-bottom: -24px;
+}
+.ant-advanced-search-form .ant-form-item {
+  flex-wrap: nowrap;
+}
+.ant-advanced-search-form .ant-form-item .ant-form-item-control {
+  max-width: calc(100% - 80px);
+}
+.ant-advanced-search-form .ant-picker {
+  flex: 1;
+}
+.ant-advanced-search-form .ant-form-item-label {
+  min-width: 80px;
+}
+.ant-advanced-search-form .form-item-wrap {
+  display: flex;
+  width: 100%;
+}
+.ant-advanced-search-form .form-item-wrap.form-item-wrap-hidden {
+  display: none;
+}
+.ant-advanced-search-form .form-item-wrap.addon-wrap .ant-select {
+  max-width: calc(100% - 40px);
+}
+

@@ -18,4 +18,13 @@ features:
 footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by [dumi](https://d.umijs.org)
 ---
 
-## Hello shj-low-code!
+## 快速上手
+
+```bash
+# 安装依赖
+$ npm i shj-low-code --save
+
+// 使用 LowCode
+import { SHJLowCodeList } from 'shj-low-code';
+
+```

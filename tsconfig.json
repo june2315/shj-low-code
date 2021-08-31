@@ -15,7 +15,9 @@
       "shj-func-dialog": ["./packages/FuncDialog/src/index.tsx"],
       "shj-drag-table": ["./packages/DragTable/src/index.tsx"],
       "shj-common-drag-table": ["./packages/CommonDragTable/src/index.tsx"],
-      "shj-search-expanded-bar": ["./packages/SearchExpandedBar/src/index.tsx"]
+      "shj-search-expanded-bar": ["./packages/SearchExpandedBar/src/index.tsx"],
+      "shj-filter-table": ["./packages/FilterTable/src/index.tsx"],
+      "shj-low-code-list": ["./packages/LowCodeList/src/index.tsx"]
     },
     "declaration": true,
     "skipLibCheck": true,

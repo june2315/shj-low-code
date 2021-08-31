@@ -5,7 +5,7 @@ nav:
   path: /components
 group:
   title: Form
-  path: /form
+  path: /others/form
   order: 2
 ---
 

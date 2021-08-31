@@ -5,7 +5,7 @@ nav:
   path: /components
 group:
   title: Dialog
-  path: /dialog
+  path: /others/dialog
   order: 1
 ---
 

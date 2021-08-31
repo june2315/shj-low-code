@@ -4,7 +4,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const { readdirSync } = require('fs');
+const { readdirSync, fstat } = require('fs');
 
 const tailPkgs = readdirSync(path.join(__dirname, 'packages')).filter(
   (pkg) => pkg.charAt(0) !== '.',
@@ -13,6 +13,8 @@ const tailPkgs = readdirSync(path.join(__dirname, 'packages')).filter(
 // const tailPkgs = ['table'];
 
 const isCI = process.env.PRO_COMPONENTS_CI === 'CI';
+
+let libPkgs = ['LowCode'];
 
 const externals = isCI
   ? tailPkgs.reduce((pre, value) => {
@@ -31,15 +33,26 @@ const webPackConfigList = [];
 
 tailPkgs.forEach((pkg) => {
   const entry = {};
-  entry[`${pkg}`] = `./packages/${pkg}/src/index.tsx`;
-  if (!isCI) {
-    entry[`${pkg}.min`] = `./packages/${pkg}/src/index.tsx`;
+
+  if (libPkgs.includes(pkg)) {
+    entry[`${pkg}`] = `./packages/${pkg}/src/index.ts`;
+  } else {
+    entry[`${pkg}`] = `./packages/${pkg}/src/index.tsx`;
   }
+
+  if (!isCI) {
+    if (libPkgs.includes(pkg)) {
+      entry[`${pkg}.min`] = `./packages/${pkg}/src/index.ts`;
+    } else {
+      entry[`${pkg}.min`] = `./packages/${pkg}/src/index.tsx`;
+    }
+  }
+
   const config = {
     entry,
     output: {
       filename: '[name].js',
-      library: `Pro${pkg
+      library: `SHJ${pkg
         .toLowerCase()
         .replace(/( |^)[a-z]/g, (L) => L.toUpperCase())}`,
       libraryTarget: 'umd',

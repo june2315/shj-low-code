@@ -1,0 +1,44 @@
+{
+  "name": "shj-filter-table",
+  "version": "1.2.6",
+  "description": "shj-filter-table",
+  "module": "es/index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "src",
+    "dist",
+    "es"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ant-design/pro-components"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "Firefox ESR",
+    "> 1%",
+    "ie >= 11"
+  ],
+  "keywords": [
+    "antd",
+    "admin"
+  ],
+  "authors": [],
+  "license": "MIT",
+  "bugs": "",
+  "peerDependencies": {
+    "antd": "4.x",
+    "react": "16.x",
+    "shj-common-drag-table": "1.x",
+    "shj-search-expanded-bar": "1.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "shj-common-drag-table": "^1.0.0-beta.1",
+    "shj-search-expanded-bar": "^1.2.1"
+  }
+}

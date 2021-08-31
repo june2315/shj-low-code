@@ -5,7 +5,7 @@ nav:
   path: /components
 group:
   title: Table
-  path: /table
+  path: /others/table
   order: 2
 ---
 

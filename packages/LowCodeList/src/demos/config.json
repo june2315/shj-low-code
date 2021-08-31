@@ -1,0 +1,78 @@
+{
+  "columns": [
+    {
+      "title": "#",
+      "dataIndex": "id",
+      "width": 100,
+      "render": "idCell"
+    },
+    {
+      "title": "等级名称",
+      "dataIndex": "levelName",
+      "width": 100
+    },
+    {
+      "title": "权重",
+      "dataIndex": "weight",
+      "width": 80
+    },
+    {
+      "title": "成长值",
+      "dataIndex": "growthStartVal",
+      "width": 160,
+      "render": "growthCell"
+    },
+    {
+      "title": "权益",
+      "dataIndex": "rights",
+      "width": 200
+    },
+    {
+      "title": "状态",
+      "dataIndex": "status",
+      "render": "statusCell",
+      "width": 80
+    },
+    {
+      "title": "更新时间",
+      "dataIndex": "lastUpdatedTime",
+      "width": 200
+    }
+  ],
+  "search": [
+    {
+      "name": "levelName",
+      "label": "等级名称",
+      "addonOpts": ["=", "∈"]
+    },
+    {
+      "name": "status",
+      "label": "状态",
+      "itemType": "select",
+      "data": "statusOptions",
+      "addonOpts": ["=", "∈"]
+    }
+  ],
+  "footer": [
+    {
+      "label": "新建",
+      "auth": "btn.icrm.member.user.ration",
+      "type": "primary",
+      "events": ["onClick:onAdd"]
+    },
+    {
+      "label": "启用",
+      "auth": "btn.icrm.member.user.ration",
+      "type": "primary",
+      "events": ["onClick:onEnable"],
+      "disabled": "btnDisabled"
+    },
+    {
+      "label": "禁用",
+      "auth": "btn.icrm.member.user.ration",
+      "type": "primary",
+      "events": ["onClick:onDisable"],
+      "disabled": "btnDisabled"
+    }
+  ]
+}

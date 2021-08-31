@@ -1,0 +1,41 @@
+{
+  "name": "shj-low-code-list",
+  "version": "1.0.0",
+  "description": "shj-low-code-list",
+  "module": "es/index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "src",
+    "dist",
+    "es"
+  ],
+  "repository": {
+    "type": "git"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "Firefox ESR",
+    "> 1%",
+    "ie >= 11"
+  ],
+  "keywords": [
+    "antd",
+    "admin"
+  ],
+  "authors": [],
+  "license": "MIT",
+  "bugs": "",
+  "peerDependencies": {
+    "antd": "4.x",
+    "react": "16.x",
+    "shj-filter-table": "^1.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "shj-filter-table": "^1.2.6"
+  }
+}
